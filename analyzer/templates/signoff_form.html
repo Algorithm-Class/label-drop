@@ -1,0 +1,105 @@
+<html>
+
+   <head>
+
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+   </head>
+
+   <body>
+      
+      <form name = "form" action = {% url "signoffed" %} 
+
+         method = "POST" >{% csrf_token %}
+
+         <div style = "max-width:470px;">
+            <center> 
+               <input type = "text" style = "margin-left:20%;" 
+                  placeholder = "Identifiant" name = "label" />
+            </center>
+         </div>
+
+         <div style = "max-width:470px;">
+            <center> 
+               <input type = "text" style = "margin-left:20%;" 
+                  placeholder = "Identifiant" name = "lrg" />
+            </center>
+         </div>
+
+         <div style = "max-width:470px;">
+            <center> 
+               <input type = "text" style = "margin-left:20%;" 
+                  placeholder = "Identifiant" name = "dif" />
+            </center>
+         </div>
+
+         <select class="form-select" aria-label="Default select example" style = "max-width:270px;margin-left:20%;"  >
+            <option selected>Select Reason</option>
+            <option value="1">Ignore</option>
+            <option value="2">Critical</option>
+        </select>
+
+
+{% comment %}
+
+         <select class="form-select" aria-label="Default select example" style = "max-width:270px;margin-left:20%;"  >
+            <option selected>LABEL</option>
+            <option value="1">NETWORK_MAIN_LINUX.X64_210511</option>
+            <option value="2">NETWORK_MAIN_WINDOWS.X64_210509</option>
+        </select>
+
+        <br>
+
+         <select class="form-select" aria-label="Default select example" style = "max-width:270px;margin-left:20%;"  >
+            <option selected>LRG</option>
+            <option value="1">lrgnetcloud1</option>
+            <option value="2">lrgnfptunnel</option>
+        </select>
+
+
+
+        <br>
+
+        <select class="form-select" aria-label="Default select example" style = "max-width:270px;margin-left:20%;"  >
+            <option selected>DIF</option>
+            <option value="1">a.dif</option>
+            <option value="2">b.dif</option>
+        </select>
+
+        <br>
+   
+        <select class="form-select" aria-label="Default select example" style = "max-width:270px;margin-left:20%;"  >
+            <option selected>Select Reason</option>
+            <option value="1">Ignore</option>
+            <option value="2">Critical</option>
+        </select>
+
+	{% endcomment %}		
+         <br>
+         
+         <div style = "max-width:270px;margin-left:20%;">
+            <center> 
+            
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit" 
+                  value = "signoffed" >
+                  <strong>Submit</strong>
+               </button>
+               
+            </center>
+         </div>
+
+         
+      </form>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+
+   </body>
+</html>
